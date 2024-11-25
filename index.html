@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta information for the website, including character set, viewport settings for responsiveness, and description -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive portfolio website showcasing my skills, services, and projects.">
+
+    <!-- Title of the website -->
+    <title>Responsive Portfolio Website</title>
+
+    <!-- External CSS libraries for Swiper (for sliders) and Boxicons (for icons) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+
+    <!-- Link to custom CSS file (make sure the path is correct) -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- Optional Favicon for the website -->
+   <!-- <link rel="icon" href="images/favicon.ico" type="image/x-icon">-->
+</head>
+<body>
+
+    <!-- Header section with logo, navigation links, and dark mode toggle icon -->
+    <header class="header">
+        <a href="#" class="logo" aria-label="Homepage link">Portfolio.</a>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+       <!-- <div class="bx bx-sun" id="lightMode-icon"></div>  -->
+        <div class="bx bx-menu" id="menu-icon"></div>  
+    </header>
+
+    <!-- Home section with a brief introduction and social media links -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, I am</h3>
+            <h1>Ajdin Buljko</h1>
+            <p>.................</p> <!-- Placeholder for introduction -->
+            <div class="social-media">
+                <!-- Social media icons with placeholder links -->
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="https://github.com/ABuljko" target="_blank"><i class="bx bxl-github"></i></a>
+                <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+                <a href="https://linkedin.com/in/ajdin-buljko-68ba69336/" target="_blank"><i class="bx bxl-linkedin"></i></a>
+            </div>
+            <a href="#" class="botton">Download CV</a> <!-- Link to download the CV -->
+        </div>
+
+        <!-- Profession container displaying different roles with icons -->
+        <div class="profession-container">
+            <div class="profession-box">
+                <!-- Individual professions with icons and descriptions -->
+                <div class="profession" style="--i:0;">
+                    <i class="bx bx-desktop"></i>
+                    <h3>Web Developer</h3>
+                </div>
+                <div class="profession" style="--i:1;">
+                    <i class="bx bx-code-alt"></i>
+                    <h3>Software Design</h3>
+                </div>
+                <div class="profession" style="--i:2;">
+                    <i class="bx bx-desktop"></i>
+                    <h3>Animal Lover</h3> <!-- Fun/unusual profession added here -->
+                </div>
+                <div class="profession" style="--i:3;">
+                    <i class="bx bx-code-alt"></i>
+                    <h3>Room Kisser</h3> <!-- Placeholder/fun text -->
+                </div>
+                <div class="circle"></div> <!-- Decorative circle element -->
+            </div>
+            <div class="overlay"></div> <!-- Overlay for effect -->
+        </div>
+        <div class="home-img">
+            <!-- <img src="images/home3.png">-->
+        </div>
+    </section>
+
+    <!-- About section with a heading and brief description -->
+    <section class="about" id="about">
+    <!--<img src="images/about.png">-->
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>What up!!!!!!</h3> <!-- Placeholder for informal introduction -->
+            <p>IDK SHIT</p> <!-- Placeholder text, to be updated -->
+            <a href="#" class="botton">Read More</a> <!-- Link to more info -->
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2>My<span> Skills</span></h2>
+        <div class="skill-box">
+            <span class="title">HTML</span>
+            <div class="skill-bar">
+                <span class="skill-per html">
+                    <span class="tooltip">90%</span>
+                </span>
+            </div>
+        </div>
+        <div class="skill-box">
+            <span class="title">CSS</span>
+            <div class="skill-bar">
+                <span class="skill-per css">
+                    <span class="tooltip">83%</span>
+                </span>
+            </div>
+        </div>
+        <div class="skill-box">
+            <span class="title">JavaScript</span>
+            <div class="skill-bar">
+                <span class="skill-per javascript">
+                    <span class="tooltip">45%</span>
+                </span>
+            </div>
+        </div>
+        <div class="skill-box">
+            <span class="title">Flutter</span>
+            <div class="skill-bar">
+                <span class="skill-per flutter">
+                    <span class="tooltip">70%</span>
+                </span>
+            </div>
+        </div>
+        <div class="skill-box">
+            <span class="title">Python</span>
+            <div class="skill-bar">
+                <span class="skill-per python">
+                    <span class="tooltip">75%</span>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio section showcasing projects with images -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        <div class="portfolio-container">
+            <!-- Each project displayed as a box with image, title, and description -->
+            <div class="portfolio-box">
+                <img src="images/portfolio1.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>We will see</p> <!-- Placeholder text -->
+                    <a href="#"><i class="bx bx-link-external"></i></a> <!-- Link to project -->
+                </div>
+            </div>
+            <div id="popupBox" class="popup">
+                <div class="popup-content">
+                    <h2>Popup Title</h2>
+                    <p>This is a small description text inside the popup.</p>
+                    <button onclick="downloadFile()">Download</button> <!-- Download button -->
+                    <button onclick="closePopup()">Close</button> <!-- Close button -->
+                </div>
+            </div>
+            <!-- Repeat for other projects -->
+            <div class="portfolio-box">
+                <img src="images/portfolio2.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>We will see</p> <!-- Placeholder text -->
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/portfolio3.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>We will see</p> <!-- Placeholder text -->
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/portfolio4.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>We will see</p> <!-- Placeholder text -->
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/portfolio5.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>We will see</p> <!-- Placeholder text -->
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/portfolio6.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>We will see</p> <!-- Placeholder text -->
+                    <a href="#"><i class="bx bx-link-external"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me</span></h2>
+    <form action="https://formspree.io/f/myzypape" method="POST">
+        <div class="input-box">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+        <div class="input-box">
+            <input type="number" name="phone" placeholder="Phone Number">
+            <input type="text" name="subject" placeholder="Email Subject">
+        </div>
+        <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message" class="botton">
+    </form>
+</section>
+
+    
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy, 2024 by Ajdin Buljko | All Rights Reserved</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Link to custom JavaScript file (make sure the path is correct) -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
