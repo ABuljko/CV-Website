@@ -358,6 +358,7 @@ span{
 
 .skills {
     padding-bottom: 7rem;
+    height: auto;
     width: 100rem;
     margin: 20rem auto;
     color: var(--white-color);
@@ -642,7 +643,9 @@ span{
     .home-img img{
         display: none;
     }
-    .services,
+    .skills{
+        width: 82rem;
+    }
     .portfolio{
         padding-bottom: 7rem;
     }
@@ -765,6 +768,9 @@ span{
         width: 70vw;
         margin-top: -2rem;
     }
+    .skills{
+        width: 52rem;
+    }
     .portfolio h2{
         margin-bottom: 3rem;
     }
@@ -798,6 +804,9 @@ span{
     }
     .home .profession-box .profession:nth-child(4){
         transform: rotate(180deg) translate(-210px, -335px);
+    }
+    .skills{
+        width: 40rem;
     }
     .contact form .input-box input{
         width: 100%;
