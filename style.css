@@ -806,7 +806,7 @@ span{
         transform: rotate(180deg) translate(-210px, -335px);
     }
     .skills{
-        width: 40rem;
+        width: 26rem;
     }
     .contact form .input-box input{
         width: 100%;
@@ -825,5 +825,8 @@ span{
     .footer p{
         text-align: center;
         margin-top: 2rem;
+    }
+    .skills{
+        width: 20rem;
     }
 }
