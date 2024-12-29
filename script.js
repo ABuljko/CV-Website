@@ -36,15 +36,26 @@ window.onscroll = () => {
   navbar.classList.remove("active");
 };
 
-/*// Dark Mode Toggle
-const lightModeIcon = document.querySelector("#lightMode-icon");
+// Dark Mode Toggle
+let darkModeIcon = document.querySelector("#darkMode-icon");
 
-if (lightModeIcon) {
-  lightModeIcon.onclick = () => {
-    lightModeIcon.classList.toggle("bx-moon");
-    document.body.classList.toggle("light-mode");
-  };
-}*/
+darkModeIcon.onclick=()=>{
+  darkModeIcon.classList.toggle("bx-sun");
+  document.body.classList.toggle("dark-mode");
+}
+
+const colors = ["#ff0000", "#0000ff", "#ffd700", "#754ef9"]; // Define 4 main colors
+let currentColorIndex = 0;
+
+const paintColor = document.getElementById("paint-icon");
+
+paintColor.onclick = () => {
+  // Increment the index and loop back to the start if it exceeds the length
+  currentColorIndex = (currentColorIndex + 1) % colors.length;
+
+  // Change the CSS variable for the main color
+  document.documentElement.style.setProperty("--main-color", colors[currentColorIndex]);
+};
 
 // ScrollReveal Animations
 ScrollReveal({
