@@ -14,18 +14,21 @@
 
 /* Color variables for easy theme changes */
 :root {
-    --background-color: #0b061f;
-    --text-color: #fdfdfd;
+    --background-color: #fdfdfd;
+    --text-color: #333;
     --main-color: #754ef9; /* Primary accent color */
     --white-color: #fdfdfd;
-    --shadow-color: rgba(0, 0, 0, .7);
+    --tooltip-color:#d3d3d3;
+    --shadow-color: rgba(0, 0, 0, .2);
 }
 
-/*.light-mode{
+/* Dark mode styling */
+body.dark-mode {
     --background-color: #0b061f;
     --text-color: #fdfdfd;
+    --tooltip-color:#fdfdfd;
     --shadow-color: rgba(0, 0, 0, .7);
-}*/
+}
 
 /* Base font size for responsive typography and to use rem units */
 html {
@@ -128,16 +131,25 @@ body {
 }
 
 /* Dark mode icon */
-/*#lightMode-icon {
-    font-size: 2rem;
+#darkMode-icon {
+    font-size: 2.4rem;
     cursor: pointer;
     color: var(--white-color);
-}*/
+}
 /* Dark mode icon color change in sticky header */
-/*.header.sticky #lightMode-icon {
+.header.sticky #darkMode-icon {
     color: var(--text-color);
-    opacity: .9;
-}*/
+    opacity: .7;
+}
+#paint-icon {
+    font-size: 2.4rem;
+    cursor: pointer;
+    color: var(--white-color);
+}
+.header.sticky #paint-icon {
+    color: var(--text-color);
+    opacity: .7;
+}
 #menu-icon{
     font-size: 3.6rem;
     color: var(--text-color);
@@ -149,14 +161,6 @@ body {
 section {
     padding-top: 8rem;
 }
-
-/* Dark mode styling */
-/*body.light-mode {
-    --background-color: #333;
-    --text-color: #fdfdfd;
-    --main-color: #fdfdfd;
-    --white-color: #333;
-}*/
 
 /* Common section styling */
 section {
@@ -378,12 +382,13 @@ span{
     font-size: 4.5rem;
     text-align: center;
     margin-bottom: 4rem;
+    color: var(--text-color);
 }
 .skills .title{
     display: block;
     font-size: 1.6rem;
     font-weight: 600;
-    color: var(--white-color);
+    color: var(--text-color);
     border-radius: 5rem;
 }
 .skills .skill-bar{
@@ -429,7 +434,7 @@ span{
     position: absolute;
     right: -3rem;
     top: -3.5rem;
-    background: var(--white-color);
+    background: var(--tooltip-color);
     font-weight: 500;
     font-size: 1.6rem;
     color: var(--main-color);
@@ -445,7 +450,7 @@ span{
     height: 2rem;
     width: 2rem;
     z-index: -1;
-    background-color: var(--white-color);
+    background-color: var(--tooltip-color);
     transform: translateX(-50%) rotate(45deg);
 }
 
@@ -660,13 +665,20 @@ span{
     #menu-icon{
         display: block;
     }
-   /* #lightMode-icon{
+    #darkMode-icon{
         position: absolute;
         right: 7rem;
         font-size: 2.6rem;
         color: var(--text-color);
         margin-bottom: .1rem;
-    }*/
+    }
+    #paint-icon{
+        position: absolute;
+        right: 11rem;
+        font-size: 2.6rem;
+        color: var(--text-color);
+        margin-bottom: .1rem;
+    }
     .navbar{
         position: absolute;
         top: 100%;
@@ -771,6 +783,9 @@ span{
     .skills{
         width: 52rem;
     }
+    .skills .skill-box{
+        margin-left: 2.5rem;
+    }
     .portfolio h2{
         margin-bottom: 3rem;
     }
@@ -808,12 +823,16 @@ span{
     .skills{
         width: 26rem;
     }
-    .contact form .input-box input{
-        width: 100%;
+    .skills .skill-box{
+        margin-left: 1.25rem;
     }
     .contact form .input-box input{
         width: 100%;
     }
+    .contact form .input-box input{
+        width: 100%;
+    }
+    
 }
 @media (max-width: 365px){
     .about-img img{
